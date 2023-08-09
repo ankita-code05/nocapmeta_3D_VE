@@ -1,0 +1,100 @@
+/* <script type="module" src="dist/bundle.js"></script> */
+html,
+        body{
+            margin:0;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .frame {
+            width: 1080px;
+            height: 800px;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+                Droid Sans, Helvetica Neue, sans-serif;
+            padding: 20px;
+            font-size: 14px;
+            border: none;
+        }
+
+        .warning {
+            background-color: #df68a2;
+            padding: 3px;
+            border-radius: 5px;
+            color: white;
+        }
+        .main{
+            display: flex;
+            justify-content: space-between;
+        }
+        #customizeButton{
+           
+            background: blue;
+            color: aliceblue;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bolder;
+            border-radius: 5px;
+            border: 1px solid #fff;
+        }
+        #customizeButton:hover{
+            background: white;
+            color: blue;
+            border-color: blue;
+        }
+        .head{
+            background: black;
+            padding: 8px;
+            
+            
+        }
+        #changeColorButton{
+            padding: 4px;
+            background: #fff;
+            color: black;
+            font-size: 16px;
+            border: 1px solid white;
+            ;
+            
+        }
+        #changeColorButton:hover{
+            background: black;
+            color: #fff;
+            
+        }
+        #moveCameraButton{
+            padding: 4px;
+            background: blue;
+            color: white;
+            font-size: 16px;
+            border: 1px solid white;
+           
+            
+        }
+        #moveCameraButton:hover{
+            background: white;
+            color: blue;
+            border-color: blue;
+        }
+        #changeBackgroundColorButton{
+            padding: 4px;
+            background: #fff;
+            color: black;
+            font-size: 16px;
+            border: 1px solid white;
+            margin-left: 2rem;
+            
+
+        }
+        #changeBackgroundColorButton:hover{
+            background: black;
+            color: #fff;
+        }
+        #backgroundColorPicker{
+            /* margin-top: 2rem; */
+            padding: 3px;
+            border: 1px solid white;
+            margin-right: 2rem;
+            
+        }
