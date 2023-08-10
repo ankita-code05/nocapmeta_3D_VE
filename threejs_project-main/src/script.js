@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 var avatarUrl = 'https://models.readyplayer.me/64cc7f508aad831fded2b972.glb';
 let currentAvatar = null; // Initialize with null
@@ -33,15 +33,14 @@ orbit.update();
 
 // Load and position the avatar
 const avatarLoader = new GLTFLoader();
-function Loadavatar(avatarUrl)
-    {
-        if (currentAvatar !== null) {
-            scene.remove(currentAvatar); // Remove the previous avatar from the scene
-        }
+function Loadavatar(avatarUrl) {
+    if (currentAvatar !== null) {
+        scene.remove(currentAvatar); // Remove the previous avatar from the scene
+    }
 
-        avatarLoader.load(avatarUrl, (gltf) => {
+    avatarLoader.load(avatarUrl, (gltf) => {
         const avatar = gltf.scene;
-        avatar.scale.set(2,2,2)
+        avatar.scale.set(2, 2, 2)
         scene.add(avatar);
         avatar.position.set(0, 5, 0);
         currentAvatar = avatar; // Update the currentAvatar reference
@@ -82,7 +81,7 @@ animate();
 
 function displayIframe() {
     const frame = document.getElementById('frame');
-    frame.src = `https://nocapmeta-pycfu7.readyplayer.me/avatar?frameApi`;
+    frame.src = `https://3d-virtual.readyplayer.me/avatar?frameApi`;
     frame.hidden = false;
 }
 const customizeButton = document.getElementById('customizeButton');
@@ -149,7 +148,7 @@ const colorPicker = document.getElementById('colorPicker');
 
 changeColorButton.addEventListener('click', () => {
     const newColor = new THREE.Color(colorPicker.value);
-    
+
     // Smoothly transition room color
     const colorChangeDuration = 1000; // Animation duration in milliseconds
     const originalColor = room.material.color.clone();
@@ -180,7 +179,7 @@ const moveCameraButton = document.getElementById('moveCameraButton');
 
 moveCameraButton.addEventListener('click', () => {
     const targetPosition = new THREE.Vector3(10, 5, 20);  // Example target position
-    
+
     // Smoothly transition camera position
     const cameraMoveDuration = 1000; // Animation duration in milliseconds
     const startPosition = camera.position.clone();
